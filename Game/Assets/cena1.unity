@@ -694,7 +694,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 447062369}
+      - m_Target: {fileID: 1925930004}
         m_MethodName: Atk1
         m_Mode: 1
         m_Arguments:
@@ -816,7 +816,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 447062369}
+      - m_Target: {fileID: 1925930004}
         m_MethodName: Atk3
         m_Mode: 1
         m_Arguments:
@@ -1195,6 +1195,10 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1925930003}
+    - target: {fileID: 1177459114440816, guid: bbef8d976fee3ad4db66a9131fccc9ae, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bbef8d976fee3ad4db66a9131fccc9ae, type: 2}
   m_IsPrefabParent: 0
@@ -1588,6 +1592,10 @@ Prefab:
       propertyPath: m_Name
       value: Heli (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1820497577226554, guid: 0b33293dd8ecdb0488250b2070b872fc, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 50959118967196476, guid: 0b33293dd8ecdb0488250b2070b872fc, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0b33293dd8ecdb0488250b2070b872fc, type: 2}
@@ -1888,6 +1896,10 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1925930003}
+    - target: {fileID: 1893751187153560, guid: 613c6fed079153d408cfcc2a8f043b40, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 613c6fed079153d408cfcc2a8f043b40, type: 2}
   m_IsPrefabParent: 0
@@ -1940,6 +1952,10 @@ Prefab:
       propertyPath: CasaMorcego
       value: 
       objectReference: {fileID: 1551601984}
+    - target: {fileID: 1177459114440816, guid: bbef8d976fee3ad4db66a9131fccc9ae, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bbef8d976fee3ad4db66a9131fccc9ae, type: 2}
   m_IsPrefabParent: 0
@@ -2608,7 +2624,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 447062369}
+      - m_Target: {fileID: 1925930004}
         m_MethodName: Atk2
         m_Mode: 1
         m_Arguments:
@@ -3224,6 +3240,10 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1925930003}
+    - target: {fileID: 1893751187153560, guid: 613c6fed079153d408cfcc2a8f043b40, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 613c6fed079153d408cfcc2a8f043b40, type: 2}
   m_IsPrefabParent: 0
@@ -3351,6 +3371,10 @@ Prefab:
     - target: {fileID: 1820497577226554, guid: 0b33293dd8ecdb0488250b2070b872fc, type: 2}
       propertyPath: m_Name
       value: Heli (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820497577226554, guid: 0b33293dd8ecdb0488250b2070b872fc, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 50959118967196476, guid: 0b33293dd8ecdb0488250b2070b872fc, type: 2}
@@ -3930,6 +3954,10 @@ Prefab:
     - target: {fileID: 4395611101431060, guid: 0b33293dd8ecdb0488250b2070b872fc, type: 2}
       propertyPath: m_RootOrder
       value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820497577226554, guid: 0b33293dd8ecdb0488250b2070b872fc, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 50959118967196476, guid: 0b33293dd8ecdb0488250b2070b872fc, type: 2}
@@ -4697,6 +4725,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: -0.6
       objectReference: {fileID: 0}
+    - target: {fileID: 1820497577226554, guid: 0b33293dd8ecdb0488250b2070b872fc, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 50959118967196476, guid: 0b33293dd8ecdb0488250b2070b872fc, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0b33293dd8ecdb0488250b2070b872fc, type: 2}
@@ -5327,6 +5359,10 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1925930003}
+    - target: {fileID: 1893751187153560, guid: 613c6fed079153d408cfcc2a8f043b40, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 613c6fed079153d408cfcc2a8f043b40, type: 2}
   m_IsPrefabParent: 0
@@ -5629,6 +5665,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1899811673}
+  - component: {fileID: 1899811674}
   m_Layer: 0
   m_Name: ataqueCollider
   m_TagString: Untagged
@@ -5643,12 +5680,37 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1899811672}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.18, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1925930003}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1899811674
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1899811672}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.8062412, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.40737855, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1900475793
 GameObject:
   m_ObjectHideFlags: 0
@@ -6316,6 +6378,10 @@ Prefab:
     - target: {fileID: 4395611101431060, guid: 0b33293dd8ecdb0488250b2070b872fc, type: 2}
       propertyPath: m_LocalScale.x
       value: -0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820497577226554, guid: 0b33293dd8ecdb0488250b2070b872fc, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 50959118967196476, guid: 0b33293dd8ecdb0488250b2070b872fc, type: 2}
