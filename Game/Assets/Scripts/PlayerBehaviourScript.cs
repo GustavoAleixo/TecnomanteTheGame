@@ -26,7 +26,7 @@ public class PlayerBehaviourScript : MonoBehaviour {
 	public float raioValidaParede;
 	public int damage;
 
-	public Transform atacando;
+	public Collider2D atacando;
 
 
 	public LayerMask solido;
@@ -42,6 +42,7 @@ public class PlayerBehaviourScript : MonoBehaviour {
 		estaVivo = true;
 		viradoParaDireita = true;
 		estaAtacando = false;
+		damage = 1;
 	}
 
 	// Update is called once per frame
@@ -131,5 +132,15 @@ public class PlayerBehaviourScript : MonoBehaviour {
 
 		Gizmos.DrawWireSphere (verificaChao.position, raioValidaChao);
 		Gizmos.DrawWireSphere (verificaParede.position, raioValidaParede);
+	}
+
+	void OnTriggerEnter2d(Collider2D other){
+		if (atacando.CompareTag ("Enemy")) {
+			SoldierBehaviour soldier = atacando.GetComponent<SoldierBehaviour> ();
+
+			if (soldier != null) {
+				soldier.DamageEnemy (damage);
+			}
+		}
 	}
 }
