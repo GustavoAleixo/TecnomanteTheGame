@@ -23,11 +23,10 @@ GameObject:
   - component: {fileID: 95544106961130946}
   - component: {fileID: 58314938521588496}
   - component: {fileID: 58265948785419170}
-  - component: {fileID: 50959118967196476}
   - component: {fileID: 114559708782949978}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Heli
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40,7 +39,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4779535588323576}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: verificaChao
   m_TagString: Untagged
   m_Icon: {fileID: -6488666005112524639, guid: 0000000000000000d000000000000000, type: 0}
@@ -55,7 +54,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4700922432301936}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: verificaParede
   m_TagString: Untagged
   m_Icon: {fileID: -1577725955494882426, guid: 0000000000000000d000000000000000, type: 0}
@@ -69,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1820497577226554}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.83, y: -1.3, z: 0}
+  m_LocalPosition: {x: 7.83, y: -0.57, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children:
   - {fileID: 4779535588323576}
@@ -103,26 +102,6 @@ Transform:
   m_Father: {fileID: 4395611101431060}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50959118967196476
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1820497577226554}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 5
 --- !u!58 &58265948785419170
 CircleCollider2D:
   m_ObjectHideFlags: 1

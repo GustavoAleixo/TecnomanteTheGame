@@ -5,7 +5,9 @@ using UnityEngine;
 public class SoldierBehaviour : MonoBehaviour {
 
 	private Transform tr;
+	private SpriteRenderer sprite;
 	private Animator an;
+	public Rigidbody2D rb2d;
 	public Transform verificaChao;
 	public Transform verificaParede;
 
@@ -16,7 +18,6 @@ public class SoldierBehaviour : MonoBehaviour {
 	private bool naoEstaAtirando;
 	private bool viradoParaDireita;
 
-	protected SpriteRenderer sprite;
 
 	public float velocidade;
 	public float raioValidaChao;
@@ -34,6 +35,7 @@ public class SoldierBehaviour : MonoBehaviour {
 	}
 
 	void Awake () {
+		rb2d = GetComponent<Rigidbody2D> ();
 		tr = GetComponent<Transform> ();
 		an = GetComponent<Animator> ();
 		player = GetComponent<Transform> ();
@@ -99,7 +101,7 @@ public class SoldierBehaviour : MonoBehaviour {
 
 	}
 
-	public void DamageEnemy(int damage){
+	/*public void DamageEnemy(int damage){
 		health -= damage;
 		StartCoroutine (Damage ());
 		if (health > 1)
@@ -110,5 +112,31 @@ public class SoldierBehaviour : MonoBehaviour {
 		sprite.color = Color.red;
 		yield return new WaitForSeconds (0.1f);
 		sprite.color = Color.white;
+	}*/
+
+	void OnTriggerEnter2D (Collider2D other){
+		if (other.CompareTag ("Player")) {
+			DamageEnnemy ();
+		}
+	}
+
+	IEnumerator DamageEffect(){
+		float actualSpeed = velocidade;
+		velocidade = velocidade * -1;
+		sprite.color = Color.red;
+		rb2d.AddForce (new Vector2(0f, 200f));
+		yield return new WaitForSeconds (0.1f);
+		velocidade = actualSpeed;
+		sprite.color = Color.white;
+	}
+
+	void DamageEnnemy (){
+		health--;
+		StartCoroutine (DamageEffect());
+
+		if (health < 1) {
+			Destroy (gameObject);
+		}
+			
 	}
 }
