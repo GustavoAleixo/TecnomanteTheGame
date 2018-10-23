@@ -138,6 +138,5 @@ C:\Users\Gustavo\Documents\Projects\Unity\TECNOMANTE\TecnomanteTheGame\Game\Temp
 C:\Users\Gustavo\Documents\Projects\Unity\TECNOMANTE\TecnomanteTheGame\Game\Temp\bin\Debug\UnityEngine.SpatialTracking.xml
 C:\Users\Gustavo\Documents\Projects\Unity\TECNOMANTE\TecnomanteTheGame\Game\Temp\bin\Debug\UnityEditor.VR.xml
 C:\Users\Gustavo\Documents\Projects\Unity\TECNOMANTE\TecnomanteTheGame\Game\Temp\bin\Debug\UnityEditor.iOS.Extensions.Xcode.xml
-C:\Users\Gustavo\Documents\Projects\Unity\TECNOMANTE\TecnomanteTheGame\Game\obj\Debug\Assembly-CSharp-firstpass.csprojResolveAssemblyReference.cache
 C:\Users\Gustavo\Documents\Projects\Unity\TECNOMANTE\TecnomanteTheGame\Game\obj\Debug\Assembly-CSharp-firstpass.dll
 C:\Users\Gustavo\Documents\Projects\Unity\TECNOMANTE\TecnomanteTheGame\Game\obj\Debug\Assembly-CSharp-firstpass.pdb
