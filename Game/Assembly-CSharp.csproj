@@ -53,6 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\BatEnemy.cs" />
      <Compile Include="Assets\Scripts\BoosScript.cs" />
+     <Compile Include="Assets\Scripts\Camera.cs" />
      <Compile Include="Assets\Scripts\CameraScript.cs" />
      <Compile Include="Assets\Scripts\Furadeira.cs" />
      <Compile Include="Assets\Scripts\HeliBehaviour.cs" />

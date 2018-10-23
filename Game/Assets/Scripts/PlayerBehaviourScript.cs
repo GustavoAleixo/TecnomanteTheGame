@@ -32,12 +32,14 @@ public class PlayerBehaviourScript : MonoBehaviour {
 	public float attackRate;
 	public Collider2D atacando;
 
-
 	public LayerMask solido;
+
+	private Camera cameraScript;
 
 
 	// Use this for initialization
 	void Start () {
+		cameraScript = GameObject.Find ("Main Camera").GetComponent<Camera> ();
 		rb = GetComponent<Rigidbody2D> ();
 		tr = GetComponent<Transform> ();
 		an = GetComponent<Animator> ();
@@ -74,9 +76,6 @@ public class PlayerBehaviourScript : MonoBehaviour {
 			
 			Animations ();
 		}
-			
-
-
 	}
 
 	public void DoJump(){
@@ -151,6 +150,8 @@ public class PlayerBehaviourScript : MonoBehaviour {
 		
 
 	IEnumerator DamageEffect(){
+		
+		cameraScript.ShakeCamera (0.3f, 0.05f);
 
 		for (float i = 0f; i < 1f; i += 0.1f) {
 			sprite.enabled = false;
