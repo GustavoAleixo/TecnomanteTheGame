@@ -10,6 +10,7 @@ public class PlayerBehaviourScript : MonoBehaviour {
 	private Animator an;
 	public Transform verificaChao;
 	public Transform verificaParede;
+	public SpriteRenderer sprite;
 
 	private bool estaAndando;
 	private bool estaNoChao;
@@ -17,7 +18,8 @@ public class PlayerBehaviourScript : MonoBehaviour {
 	private bool estaVivo;
 	private bool viradoParaDireita;
 	private bool estaAtacando;
-	private int life;
+	private bool invuneravel = false;
+	private int health;
 
 	private float axis;
 	public float velocidade;
@@ -26,6 +28,8 @@ public class PlayerBehaviourScript : MonoBehaviour {
 	public float raioValidaParede;
 	public int damage;
 
+	private float nextAttack = 0f;
+	public float attackRate;
 	public Collider2D atacando;
 
 
@@ -37,8 +41,8 @@ public class PlayerBehaviourScript : MonoBehaviour {
 		rb = GetComponent<Rigidbody2D> ();
 		tr = GetComponent<Transform> ();
 		an = GetComponent<Animator> ();
-
-		life = 10;
+		sprite = GetComponent<SpriteRenderer> ();
+		health = 10;
 		estaVivo = true;
 		viradoParaDireita = true;
 		estaAtacando = false;
@@ -84,17 +88,28 @@ public class PlayerBehaviourScript : MonoBehaviour {
 		
 
 	public void Atk1(){
+		if (Time.time > nextAttack) {
 		an.SetTrigger ("ATK1");
 		atacando.gameObject.SetActive (true);
+		nextAttack = Time.time + attackRate;
 		//yield return new WaitForSeconds (0.1f);
+		}
 	}
 	public void Atk2(){
-		an.SetTrigger ("ATK2");
-		atacando.gameObject.SetActive (true);
+
+		if (Time.time > nextAttack) {
+			an.SetTrigger ("ATK2");
+			atacando.gameObject.SetActive (true);
+			nextAttack = Time.time + attackRate;
+		}
+
 	}
 	public void Atk3(){
-		an.SetTrigger ("ATK3");
-		atacando.gameObject.SetActive (true);
+		if (Time.time > nextAttack) {
+			an.SetTrigger ("ATK3");
+			atacando.gameObject.SetActive (true);
+			nextAttack = Time.time + attackRate;
+		}
 	}
 		
 	void FixedUpdate()
@@ -133,14 +148,30 @@ public class PlayerBehaviourScript : MonoBehaviour {
 		Gizmos.DrawWireSphere (verificaChao.position, raioValidaChao);
 		Gizmos.DrawWireSphere (verificaParede.position, raioValidaParede);
 	}
+		
 
-	void OnTriggerEnter2d(Collider2D other){
-		if (atacando.CompareTag ("Enemy")) {
-			SoldierBehaviour soldier = atacando.GetComponent<SoldierBehaviour> ();
+	IEnumerator DamageEffect(){
 
-			if (soldier != null) {
-				soldier.DamageEnemy (damage);
+		for (float i = 0f; i < 1f; i += 0.1f) {
+			sprite.enabled = false;
+			yield return new WaitForSeconds (0.1f);
+			sprite.enabled = true;
+			yield return new WaitForSeconds (0.1f);
+		};
+
+		invuneravel = false;
+	}
+
+	public void DamagePlayer(){
+		if (!invuneravel) {
+			invuneravel = true;
+			health--;
+			StartCoroutine (DamageEffect ());
+
+			if (health < 1) {
+				Debug.Log ("Morreu");
 			}
 		}
-	}
+	} 
+		
 }
