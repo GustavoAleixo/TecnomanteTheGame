@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BoosScript : MonoBehaviour {
 
+    private float cronometro;
 	private Animator an;
 
 	public Transform player;
@@ -20,7 +21,7 @@ public class BoosScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-
+        cronometro += Time.deltaTime;
 		var distanciaPlayer = transform.position.x - player.position.x;
 
 		if (distanciaPlayer > 0 && viradoParaDireita) {
